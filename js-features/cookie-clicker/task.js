@@ -7,10 +7,10 @@
     clicker.textContent = click;
     cookie.width = 300;
 
-    function delay() {
+    function startSize() {
     cookie.width = 200;
   }
-setTimeout(delay, 40); 
+setTimeout(startSize, 40); 
 };
 cookie.onclick = clickCount;
 
