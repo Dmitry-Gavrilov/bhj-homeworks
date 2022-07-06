@@ -1,3 +1,14 @@
+  
+ const clicker = document.getElementById("clicker__counter"); 
+  let cookie = document.getElementById("cookie");
+
+  function clickCount() {
+    cookie.width = ++clicker.textContent % 2 ? 250 : 200;
+};
+cookie.onclick = clickCount;
+
+
+/*
   const clicker = document.getElementById("clicker__counter"); 
   let cookie = document.getElementById("cookie");
 
@@ -14,5 +25,5 @@ setTimeout(startSize, 40);
 };
 cookie.onclick = clickCount;
 
-
+*/
 
