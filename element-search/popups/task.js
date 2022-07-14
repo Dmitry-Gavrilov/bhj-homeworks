@@ -6,16 +6,15 @@ const btnRed = Array.from(document.getElementsByClassName('btn btn_danger modal_
 modalMain.className = "modal modal_active";
 
 for (let i = 0; i < btnRed.length; i++) {
- btnRed[i].addEventListener('click', () => {
+   btnRed[i].addEventListener('click', () => {
    modalMain.className = 'modal';
    modalSuccess.className = 'modal modal_active';
- })
+   })
 }  
   for (let i = 0; i < btnX.length; i++) {
-  btnX[i].addEventListener('click', () => {
+    btnX[i].addEventListener('click', () => {
     modalMain.className = 'modal';
     modalSuccess.className = 'modal';
    })
  }
 
- 
