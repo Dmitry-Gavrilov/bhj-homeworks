@@ -17,14 +17,26 @@ class Game {
   }
 
   registerEvents() {
+    
     /*
-      TODO:
-      Написать обработчик события, который откликается
-      на каждый введённый символ.
-      В случае правильного ввода слова вызываем this.success()
-      При неправильном вводе символа - this.fail();
-     */
+     document.addEventListener('keydown', event => {
+      const eventLetter = event.key.toLowerCase().charCodeAt(0);
+      const screenLetter = this.currentSymbol.textContent.toLowerCase().charCodeAt(0);
+      if (screenLetter === eventLetter) {
+          this.success();
+      } else {
+          this.fail();
+      }
+    });
+   */
+        document.addEventListener('keyup', (press) => {
+        if (press.key.toUpperCase() === this.currentSymbol.textContent.toUpperCase()) {
+        this.success(); 
+      }
+      else this.fail();
+    }); 
   }
+  
 
   success() {
     this.currentSymbol.classList.add('symbol_correct');
@@ -67,6 +79,7 @@ class Game {
         'cinema',
         'love',
         'javascript'
+      
       ],
       index = Math.floor(Math.random() * words.length);
 
@@ -87,4 +100,3 @@ class Game {
 }
 
 new Game(document.getElementById('game'))
-
