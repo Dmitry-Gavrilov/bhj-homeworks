@@ -8,3 +8,10 @@ textarea {
   border: 1px solid #e2e2e2;
   box-sizing: border-box;
 }
+
+.clear_btn {
+  margin-top: 15px;
+  padding: 15px 15px;
+  background: yellowgreen;
+  cursor: pointer;
+}
